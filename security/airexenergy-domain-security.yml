@@ -1,0 +1,18 @@
+generated: '2026-09-19'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: airex-energy.com
+  https: false
+domains:
+- domain: airex-energy.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
+note: 'The TLS/HTTP leg of this probe ran while the airex-energy.com origin (51.79.107.79)
+  had stopped answering on port 443 mid-pass; hosts[0].https: false is that outage,
+  not a missing certificate. Earlier in the same run the apex answered HTTP 200 over
+  HTTPS and www.airex-energy.com 301-redirected to it. The DNS findings (DNSSEC absent,
+  no CAA, SPF and DMARC published with p=quarantine) are unaffected.'

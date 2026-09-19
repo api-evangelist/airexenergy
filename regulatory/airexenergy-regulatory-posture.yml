@@ -1,0 +1,21 @@
+generated: '2026-09-19'
+method: probed
+source: >-
+  live probes of airex-energy.com plus the artifacts harvested this run
+  (well-known/airexenergy-well-known.yml, security/airexenergy-domain-security.yml)
+note: >-
+  Airex Energy is an industrial biomass-conversion manufacturer with a WordPress
+  marketing site and no developer program. No security.txt, trust center, SBOM,
+  accessibility conformance report, subprocessor list, data-residency statement or
+  AI-transparency disclosure was found. An empty signals set is the measurement,
+  not a gap in the probe.
+signals: {}
+probes:
+- url: https://airex-energy.com/.well-known/security.txt
+  status: 404
+- url: https://airex-energy.com/.well-known/ai-plugin.json
+  status: 404
+- url: https://airex-energy.com/api
+  status: 404
+- url: https://airex-energy.com/docs
+  status: 404

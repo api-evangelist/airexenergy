@@ -1,0 +1,33 @@
+generated: '2026-09-19'
+method: probed
+source: live probes of the airex-energy.com registrable domain (no API, docs, console or MCP host exists)
+note: >-
+  Every /.well-known/ path probed on the only host this record knows returned the
+  WordPress 404 template (HTTP 404, text/html). No document was served, so no
+  WellKnown or SecurityTxt pointer is emitted. www.airex-energy.com 301-redirects to
+  the apex, and no api./docs./developer. hostname resolves, so there is no second
+  host to probe.
+hosts:
+- host: airex-energy.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

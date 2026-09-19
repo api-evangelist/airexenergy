@@ -1,7 +1,13 @@
 aid: airexenergy
-name: Airexenergy
-description: 'Airexenergy is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: Airex Energy
+description: >-
+  Airex Energy (Airex Énergie) is a Laval, Québec cleantech company that converts residual
+  biomass — forest residues, sawdust, bark and recycled wood — into biocoal, biochar and
+  biocarbon using its patented CarbonFX torrefaction technology. Founded in 2014 as a division
+  of Airex Industries, it operates a commercial biocoal pellet plant in Bécancour, Québec, has
+  partnered with SUEZ to industrialize biochar production in Europe and North America, and
+  raised a CAD $38 million Series B in 2024. It is an industrial manufacturer and does not
+  publish a developer program or public API.
 url: https://raw.githubusercontent.com/api-evangelist/airexenergy/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +18,14 @@ created: '2026-09-19'
 modified: '2026-09-19'
 tags:
 - Company
+- Biochar
+- Biocoal
+- Bioenergy
+- Torrefaction
+- Carbon Removal
+- Clean Technology
+- Biomass
+- Manufacturing
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +34,41 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://equityzen.com/company/airexenergy
+  url: https://airex-energy.com/
+- type: Newsroom
+  url: https://airex-energy.com/news/
+- type: PrivacyPolicy
+  url: https://airex-energy.com/privacy-policy/
+- type: TermsOfService
+  url: https://airex-energy.com/terms-and-conditions/
+- type: DomainSecurity
+  url: security/airexenergy-domain-security.yml
+- type: LLMsTxt
+  url: llms/airexenergy-llms.txt
+
+x-enrichment:
+  date: '2026-09-19'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Airex Energy is an industrial biomass-torrefaction manufacturer whose entire web
+    presence is a WordPress marketing site — /api, /docs, /api-docs, /openapi.json,
+    /swagger.json and every /.well-known/ path return the site's 404 template, and the
+    only HTTP 200 JSON surface, /wp-json/, exposes nothing but WordPress core and
+    third-party plugin namespaces (Yoast, Elementor, WPML, Gravity Forms, Wordfence).
+  evidence:
+  - url: https://airex-energy.com/
+    status: 200
+  - url: https://airex-energy.com/openapi.json
+    status: 404
+  - url: https://airex-energy.com/api-docs
+    status: 404
+  - url: https://airex-energy.com/.well-known/agent-card.json
+    status: 404
+  - url: https://airex-energy.com/wp-json/
+    status: 200
+  checked: '2026-09-19'
